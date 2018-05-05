@@ -1923,6 +1923,7 @@ u8 New_abnormal_width_AD(int* ave_center,u8 *dir)
     center_temp = ave_s16(&black_R[start_edge[1]],cnt[1]);
     if(center_temp!=-1)
     {
+//      *ave_center = 160;
       center[1] = center_temp*3;
     }
   }
@@ -1936,6 +1937,7 @@ u8 New_abnormal_width_AD(int* ave_center,u8 *dir)
   else if(edge[1]!=0&&nor_edge[1]!=0&&abs_s16(center[1]-Three_Lie[1])<abs_s16(center[0]-Three_Lie[1]))
   {
     *dir = Right_Island;
+    
     return 2;
   }
   return 0;
